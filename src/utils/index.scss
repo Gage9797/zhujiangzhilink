@@ -1,0 +1,27 @@
+
+  h1 {
+    // font-size: 34px;
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: 5px;
+    // letter-spacing: 10px;
+  }
+  
+  p {
+    line-height: 33px;
+  }
+  .banner {
+    width: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
