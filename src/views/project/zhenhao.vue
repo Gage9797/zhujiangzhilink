@@ -505,18 +505,21 @@ export default {
         flex-direction: row;
         justify-content: space-between;
         text-align: justify;
-        align-items: center;
+        // align-items: center;
+        img {
+          height: 123px;
+        }
         .list_item_cont {
           position: relative;
           padding: 15px;
           background: #f7f7f7;
-          height: 120px;
+          height: 123px;
           .item_title {
             font-size: 16px;
             color: #262626;
           }
           p {
-            line-height: 20px;
+            line-height: 18px;
           }
           .item_cont {
             font-size: 10px;

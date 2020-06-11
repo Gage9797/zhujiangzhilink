@@ -18,13 +18,15 @@
 
 <script>
 import navigation from "./components/nav";
-import foo from "./components/footer";
+// import foo from "./components/footer";
 import 'babel-polyfill'
 export default {
   name: "app",
   components: {
     navigation,
-    foo
+    foo:() => {
+      return import('./components/footer')
+    }
   },
   data() {
     return {

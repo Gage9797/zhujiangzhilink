@@ -382,7 +382,7 @@ a {
       flex: 6;
       z-index: 99;
       // margin-left: 100px;;
-      width: 143px;
+      // width: 143px;
       height: 39px;
     }
     .navigation {
@@ -563,7 +563,7 @@ a {
       text-align: center;
       margin-left: 60px;
       z-index: 99;
-      width: 143px;
+      // width: 143px;
       height: 39px;
     }
     .navigation {
