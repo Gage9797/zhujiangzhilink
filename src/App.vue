@@ -5,27 +5,25 @@
 --> 
 <template>
   <div id="app">
-    <div>
       <navigation></navigation>
       <router-view></router-view>
-      <foo class="main"></foo>
+      <foo></foo>
       <div v-if="scroll" class="backup" @click="backTop">
         <img src="http://www.zjchilink.com/tpl/www/images/to-top.png" style="width:60px;" />
       </div>
-    </div>
   </div>
 </template>
 
 <script>
 import navigation from "./components/nav";
 // import foo from "./components/footer";
-import 'babel-polyfill'
+import "babel-polyfill";
 export default {
   name: "app",
   components: {
     navigation,
-    foo:() => {
-      return import('./components/footer')
+    foo: () => {
+      return import("./components/footer");
     }
   },
   data() {
@@ -34,6 +32,8 @@ export default {
     };
   },
   mounted() {
+    var h = document.body.clientWidth; //获得bai屏幕宽度
+document.getElementsByTagName('body').style.zoom=1920/h;
     window.addEventListener("scroll", this.scrollToTop);
   },
   destroyed() {
@@ -72,7 +72,6 @@ export default {
 
 <style lang="scss">
 #app {
-  
   // text-align: center;
   color: #2c3e50;
   font-family: Microsoft YaHei;
@@ -87,26 +86,37 @@ export default {
   .router-link-active {
     text-decoration: none;
   }
-  @media screen and (max-width: 480px) {
-    .main {
-      width: 1000px;
-      overflow: hidden;
-    }
-      .backup {
-        width: 1000px;
-        position: fixed;
-        bottom: 3%;
-        left: 88%;
-        // right: 3%;
-      }
-  }
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 1200px) {
+    // .main {
+    //   width: 1000px;
+    // }
+    zoom: .84;
+    width: 100%;
+    margin: 0 auto;
+    overflow: scroll;
     .backup {
+      width: 1000px;
       position: fixed;
       bottom: 3%;
-      right: 3%;
-      cursor:pointer;
+      left: 88%;
+      // right: 3%;
     }
   }
+      .backup {
+      width: 1000px;
+      position: fixed;
+      bottom: 3%;
+      left: 88%;
+      // right: 3%;
+    }
+  // @media screen and (max-width: 1200px) {
+  //   .backup {
+  //     position: fixed;
+  //     bottom: 3%;
+  //     right: 3%;
+  //     cursor:pointer;
+  //   }
+  //   overflow: scroll;
+  // }
 }
 </style>

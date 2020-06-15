@@ -365,23 +365,22 @@ a {
 .router-link-active {
   text-decoration: none;
 }
-@media screen and (max-width: 480px) {
-  .container {
+@media screen and (max-width: 1200px) {
+.container {
     position: fixed;
     z-index: 9999;
     top: 0;
-    // left: 50%;
-    // transform: translateX(-50%);
-    width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     height: 78px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     .logo {
-      // text-align: center;
-      flex: 6;
+      text-align: center;
+      margin-left: 60px;
       z-index: 99;
-      // margin-left: 100px;;
       // width: 143px;
       height: 39px;
     }
@@ -391,7 +390,7 @@ a {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      margin-right: 130px;
+      // margin-right: 130px;
       .active {
         position: relative;
         width: 145px;
@@ -408,8 +407,8 @@ a {
         // left: 100%;
         // margin: 0 auto;
         width: 145px;
-        left: 50%;
-        transform: translateX(-50%);
+        // left: 50%;
+        // transform: translateX(-50%);
         height: 100%;
         border-bottom: 2px solid #bc1950;
         z-index: 99;
@@ -426,6 +425,9 @@ a {
       //   transition: 0.2s all linear;
       //   }
       // }
+      li:hover {
+        cursor: pointer;
+      }
       li {
         position: relative;
         //width: 145px;
@@ -448,21 +450,22 @@ a {
 
       li:hover::before {
         width: 145px;
-        top: -3px;
-        left: 50%;
-        transform: translateX(-50%);
+        // top: -3px;
+        // left: 50%;
+        // transform: translateX(-50%);
         transition-delay: 0.1s;
         border-bottom-color: #bc1950;
         z-index: -1;
       }
 
-      li:hover ~ li::before {
-        // left: 0;
-      }
+      // li:hover ~ li::before {
+      //   left: 0;
+      // }
       .title {
         // font-size: 24px;
         font-family: Source Han Sans CN;
         font-weight: 400;
+        font-size: 16px;
         color: rgba(255, 255, 255, 1);
         line-height: 78px;
         text-align: center;
@@ -505,9 +508,6 @@ a {
             border-bottom-color: #bc1950;
             z-index: -1;
           }
-          a:visited {
-            color: #bc1950;
-          }
         }
         .active {
           position: relative;
@@ -533,7 +533,7 @@ a {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        background-color: rgba(58, 57, 57, 0.5);
+        background-color: rgba(38, 38, 38, 0.7);
         z-index: -1;
       }
     }
@@ -541,13 +541,22 @@ a {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: rgb(255, 255, 255);
-      background: rgba(38, 38, 38, 1);
-      opacity: 0.7;
+      background: red;
     }
   }
+  .container:hover {
+    // background: red;
+    background: rgba(38, 38, 38, 0.7);
+    // .wrap {
+    //   background: rgb(38, 38, 38);
+    //   opacity: 0.7;
+    // }
+  }
+  .nav-show {
+    background: rgba(38, 38, 38, 0.7);
+  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .container {
     position: fixed;
     z-index: 9999;
@@ -715,7 +724,7 @@ a {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        background-color: rgba(58, 57, 57, 0.5);
+        background-color: rgba(38, 38, 38, 0.7);
         z-index: -1;
       }
     }

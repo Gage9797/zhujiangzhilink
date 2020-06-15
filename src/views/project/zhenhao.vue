@@ -30,7 +30,9 @@
           </div>
           <div class="text">
             <div>
-              <div class="title"><span></span>公司简介</div>
+              <div class="title">
+                <span></span>公司简介
+              </div>
               <div class="information">
                 <p>广州臻好看科技文化传媒有限公司，是广东珠江智联信息科技股份有限公司旗下参股子公司，定位MCN机构，专业的短视频自媒体内容生产平台；</p>
                 <p>目前拥有行业知名科技类自媒体“嘿丝科技”，定位泛娱乐化互联网科技数码短视频自媒体；</p>
@@ -315,21 +317,21 @@ export default {
           font-weight: 400;
           color: rgba(38, 38, 38, 1);
           line-height: 30px;
-          
-      position: relative;
+
+          position: relative;
         }
-            span {
-      display: inline-block;
-      margin-right: 26px;
-    }
-    span::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 20px;
-      border: 3px solid rgba(188, 25, 80, 1);
-    }
+        span {
+          display: inline-block;
+          margin-right: 26px;
+        }
+        span::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 20px;
+          border: 3px solid rgba(188, 25, 80, 1);
+        }
         .information {
           padding-top: 43px;
           font-size: 15px;
@@ -351,7 +353,7 @@ export default {
         justify-content: space-between;
         .mall-content {
           position: relative;
-            overflow: hidden;
+          overflow: hidden;
 
           .mall_box {
             width: 460px;
@@ -396,7 +398,7 @@ export default {
     width: 100%;
     background: #f7f7f7;
     .info_data_box {
-      width: 1300px;
+      width: 80%;
       height: 200px;
       margin: auto;
       display: flex;
@@ -443,6 +445,44 @@ export default {
           margin: 0 10px 0 15px;
         }
       }
+      @media screen and (max-width: 1200px) {
+        .play_data {
+          border-right: 2px solid #e8eaeb;
+          width: 20%;
+          text-align: center;
+          .info_title {
+            color: #8f9396;
+            font-size: 14px;
+            margin-top: 10px;
+          }
+          span {
+            font-size: 36px;
+            color: #bc1950;
+            position: relative;
+          }
+          i {
+            position: absolute;
+            top: -15px;
+            right: -14px;
+            font-size: 22px;
+          }
+        }
+        .ranking_box {
+          text-align: right;
+          width: 400px;
+          .ranking_title {
+            display: inline-block;
+            width: 220px;
+            text-align: justify;
+            color: #8f9396;
+          }
+          .num {
+            color: #bc1950;
+            font-size: 34px;
+            margin: 0 10px 0 15px;
+          }
+        }
+      }
     }
   }
   .aboutUs_box {
@@ -459,7 +499,7 @@ export default {
         padding-right: 20px;
         position: relative;
         img {
-        width: 490px;
+          width: 490px;
 
           transition: all 0.5s;
         }

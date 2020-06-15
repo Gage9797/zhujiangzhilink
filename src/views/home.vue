@@ -82,7 +82,7 @@
     <div class="container-center">
       <div class="industy-information">
         <div class="title">
-          <h1>企业咨询</h1>
+          <h1>企业资讯</h1>
           <div class="english-title">Industy Information</div>
         </div>
         <div class="content">
@@ -209,12 +209,12 @@ export default {
 
 <style lang="scss" scoped>
 .main {
-  // width: 100%;
+  width: 100%;
   //   /deep/ .swiper-pagination  .swiper-pagination-bullet {
   //   margin: 0 8px;
   //   color: white !important;
   // }
-  overflow: hidden;
+  // overflow: scroll;
   .advantages-content {
     margin-top: 80px;
     height: 282px;
@@ -455,10 +455,15 @@ export default {
           width: 100%;
         }
       }
+      
+          img:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+          }
     }
   }
   .container-center {
     padding-top: 0;
   }
+  
 }
 </style>

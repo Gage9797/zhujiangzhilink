@@ -4,10 +4,11 @@
  * @Date: 2020-05-25 14:17:51
 --> 
 <template>
-  <div>
+  <div class="main">
     <div class="container">
       <div class="icon">
-        <img class="fi-logo" src="@/assets/home/logo_bottom.png" />
+        <!-- <embed src="@/assets/home/logo_bottom.svg" width="300" height="100" type="image/svg+xml" style="display:block;width:330px;height:240px" /> -->
+        <img class="fi-logo" src="@/assets/home/logo_bottom.svg" />
       </div>
       <div class="content">
         <div class="pointer">
@@ -56,8 +57,8 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@media screen and (max-width: 480px) {
-    .container {
+@media screen and (max-width: 1200px){
+  .container {
     margin-top: 80px;
     position: relative;
     background-image: url("../assets/home/bg_bottom.png");
@@ -67,26 +68,24 @@ export default {};
     display: flex;
     justify-content: space-around;
     .fi-logo {
-    // margin-left: -50%;
-    img {
-      width: 181px;
-      height: 187px;
-    }
-  }
-  .icon {
-    margin-top: 45px;
-    // flex: 1;
-    color: white;
-    font-size: 14px;
-    font-family: Microsoft YaHei;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 1);
-    line-height: 30px;
-    img {
       width: 81px;
       height: 87px;
+      margin-left: 30%;
+      img {
+        width: 81px;
+        height: 87px;
+      }
     }
-  }
+    .icon {
+      margin-top: 45px;
+      flex: 3;
+      color: white;
+      font-size: 14px;
+      font-family: Microsoft YaHei;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 1);
+      line-height: 30px;
+    }
     .qrcode {
       flex: 3;
 
@@ -108,7 +107,8 @@ export default {};
     .content {
       margin-top: 45px;
       display: flex;
-      flex: 6;
+      flex: 10;
+      // margin-left: 80px;
       justify-content: space-between;
       align-items: center;
       text-align: justify;
@@ -122,7 +122,7 @@ export default {};
         font-size: 14px;
         font-family: Microsoft YaHei;
         font-weight: 300;
-        color: rgb(224, 53, 53);
+        color: rgba(255, 255, 255, 1);
         line-height: 30px;
         margin: 0;
       }
@@ -150,7 +150,7 @@ export default {};
       text-align: center;
       top: 86%;
       left: 50%;
-      width: 1440px;
+      width: 100%;
       transform: translate(-50%, -50%);
       font-size: 12px;
       font-family: Microsoft YaHei;
@@ -163,7 +163,7 @@ export default {};
     }
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1200px) {
   .container {
     margin-top: 80px;
     position: relative;
@@ -255,7 +255,7 @@ export default {};
       text-align: center;
       top: 86%;
       left: 50%;
-      width: 1440px;
+      width: 100%;
       transform: translate(-50%, -50%);
       font-size: 12px;
       font-family: Microsoft YaHei;
@@ -268,5 +268,4 @@ export default {};
     }
   }
 }
-
 </style>
